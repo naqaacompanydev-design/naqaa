@@ -1,0 +1,34 @@
+# Naqaa Cleaning
+
+# Blog
+/blog/        /blog/index.html        200
+
+# FAQ
+/faq/         /faq/index.html         200
+/faq          /faq/index.html         200
+
+# Services (clean URLs)
+/services/    /services/index.html    200
+
+# Service pages
+/services/تنظيف-المنازل-والفلل/            /services/تنظيف-المنازل-والفلل/index.html            200
+/services/تنظيف-المجالس-والكنب/            /services/تنظيف-المجالس-والكنب/index.html            200
+/services/تنظيف-وعزل-الخزانات/             /services/تنظيف-وعزل-الخزانات/index.html             200
+/services/تنظيف-المكيفات-والستائر/         /services/تنظيف-المكيفات-والستائر/index.html         200
+/services/تنظيف-المسابح/                    /services/تنظيف-المسابح/index.html                    200
+/services/مكافحة-الحشرات-والقوارض/         /services/مكافحة-الحشرات-والقوارض/index.html         200
+/services/تنظيف-الشركات-والمكاتب/          /services/تنظيف-الشركات-والمكاتب/index.html          200
+/services/التنظيف-العميق-الشامل/           /services/التنظيف-العميق-الشامل/index.html           200
+/services/التنظيف-الاخضر-الصديق-للبيئة/   /services/التنظيف-الاخضر-الصديق-للبيئة/index.html   200
+/services/التنظيف-الأخضر-الصديق-للبيئة/   /services/التنظيف-الاخضر-الصديق-للبيئة/index.html   200
+/services/حماية-المجالس-بتقنية-النانو/     /services/حماية-المجالس-بتقنية-النانو/index.html     200
+
+# Home fix
+/home         /                       301
+
+# Legal
+/terms        /terms.html             200
+/privacy      /privacy.html           200
+/refund       /refund.html            200
+/accessibility /accessibility.html   200
+/cancellation /refund                 301

@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+locale: ar
+
+collections:
+  - name: "blog"
+    label: "📝 مقالات المدونة"
+    label_singular: "مقال"
+    folder: "blog"
+    path: "{{slug}}/index"
+    create: true
+    slug: "{{fields.slug}}"
+    editor:
+      preview: false
+    fields:
+
+      - label: "عنوان الصفحة (Title Tag) — لنتائج البحث"
+        name: "title_tag"
+        widget: "string"
+        hint: "يظهر في نتائج جوجل — يفضل من 50 إلى 60 حرف"
+
+      - label: "الوصف المختصر (Meta Description) — لنتائج البحث"
+        name: "meta_description"
+        widget: "text"
+        hint: "يظهر تحت العنوان في جوجل — يفضل من 140 إلى 160 حرف"
+
+      - label: "رابط المقال (Slug) — لنتائج البحث"
+        name: "slug"
+        widget: "string"
+        hint: "مثال: تنظيف-منازل-بالرياض — بالعربي بدون مسافات"
+
+      - label: "عنوان المقال الرئيسي"
+        name: "title"
+        widget: "string"
+        hint: "يظهر كعنوان كبير في أعلى المقال"
+
+      - label: "تاريخ النشر"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        hint: "يظهر تحت عنوان المقال"
+
+      - label: "اسم الكاتب"
+        name: "author"
+        widget: "string"
+        default: "فريق نقاء"
+        hint: "يظهر تحت عنوان المقال"
+
+      - label: "صورة الغلاف"
+        name: "cover_image"
+        widget: "image"
+        hint: "تظهر في أعلى المقال بعد العنوان مباشرة"
+
+      - label: "نص زرار الواتساب (CTA)"
+        name: "whatsapp_cta"
+        widget: "string"
+        default: "تواصل واتساب 💬"
+        hint: "يظهر على زرار الواتساب الأخضر في الشريط الجانبي"
+
+      - label: "نص زرار الاتصال (CTA)"
+        name: "phone_cta"
+        widget: "string"
+        default: "تواصل هاتفياً 📞"
+        hint: "يظهر على زرار الاتصال الذهبي في الشريط الجانبي"
+
+      - label: "محتوى المقال"
+        name: "body"
+        widget: "markdown"
+        hint: "اكتب المقال هنا — يدعم العناوين والقوائم والنص العريض"
+        buttons:
+          - bold
+          - italic
+          - heading-one
+          - heading-two
+          - bulleted-list
+          - numbered-list
+          - quote
+          - link
+
+      - label: "الخاتمة"
+        name: "conclusion"
+        widget: "text"
+        hint: "تظهر في نهاية المقال قبل أزرار الاتصال والواتساب — صندوق ذهبي مميز"
+
+      - label: "مقالات ذات صلة"
+        name: "related_articles"
+        widget: "list"
+        max: 3
+        hint: "اختر حتى 3 مقالات تظهر في الشريط الجانبي وأسفل المقال"
+        fields:
+          - label: "المقال"
+            name: "article"
+            widget: "select"
+            options:
+              - label: "أفضل شركة تنظيف منازل آمنة للأطفال"
+                value: "blog/افضل-شركة-تنظيف-منازل-امنة-للاطفال"
+              - label: "تنظيف منازل بالرياض"
+                value: "blog/تنظيف-منازل-بالرياض"
+              - label: "عزل وتنظيف الخزانات بالرياض"
+                value: "blog/عزل-خزانات-بالرياض"
+              - label: "تنظيف منازل بعد التشطيب بالرياض"
+                value: "blog/تنظيف-منازل-بعد-التشطيب-بالرياض"
